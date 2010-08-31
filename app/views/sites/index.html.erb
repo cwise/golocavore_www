@@ -1,0 +1,17 @@
+<head>
+	<title>GoLocavore</title>
+
+</head>
+<body style="text-align: center; background-color: #7AC447">
+	<%= image_tag "go_locavore.jpg", :alt => "GoLocavore", :width => 1072/2, :height => 304/2 %>
+	<p>Pre-registration begins September 1st 2010</p>
+  <%= content_tag :h2, 'Find your locale' %>
+  <ul>
+    <%= render :partial => 'active_site', :collection => @active_sites %>
+  </ul>
+  <%= content_tag :h2, 'Coming soon to' %>  
+  <ul>
+    <%= render :partial => 'planned_site', :collection => @planned_sites %>
+  </ul>  
+  <%= content_tag :h2, raw("Not listed? #{mail_to 'info@golocavore.ca', 'Ask nicely', :subject => 'Question about GoLocavore'} and we'll consider getting your community up and running!") %>  
+</body>
